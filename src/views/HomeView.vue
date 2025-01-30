@@ -46,12 +46,8 @@ setTimeout(() => {
 <style scoped>
 .home {
   display: grid;
-  grid-template-rows: min-content 1fr;
-
-  @media (min-width: 768px) {
-    grid-template-rows: min-content min-content;
-    align-content: center;
-  }
+  grid-template-rows: min-content min-content;
+  align-content: center;
 
   p {
     flex-grow: 1;
