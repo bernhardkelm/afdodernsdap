@@ -849,7 +849,7 @@ const quoteData: Quote[] = [
   {
     // QUOTE-42
     quote:
-      '„Wenn die Franzosen zurecht stolz auf ihren Kaiser sind und die Briten auf Nelson und Chirchill, haben wir das Recht, stolz zu sein auf Leistungen deutscher Soldaten in zwei Weltkriegen“',
+      '„Wenn die Franzosen zurecht stolz auf ihren Kaiser sind und die Briten auf Nelson und Churchill, haben wir das Recht, stolz zu sein auf Leistungen deutscher Soldaten in zwei Weltkriegen“',
     quoteDisplay:
       '„[…] haben wir das Recht, stolz zu sein auf Leistungen deutscher Soldaten in zwei Weltkriegen“',
     owner: [
