@@ -148,11 +148,11 @@ setTimeout(async () => {
   <div class="share-wrapper">
     <div class="share" data-js-share>
       <!-- Title Brand component -->
-      <BrandComponent />
+      <BrandComponent class="share-background" />
       <!-- Score Component -->
-      <ScoreComponent />
+      <ScoreComponent class="share-background" />
       <!-- Brand Card wrapper -->
-      <BrandCardWrapper>
+      <BrandCardWrapper class="share-background">
         <h3>
           {{ quotesStore.getCurrentScore() }} von {{ quotesStore.answeredQuotesCount }} Aussagen
           erkannt
@@ -204,6 +204,7 @@ setTimeout(async () => {
   grid-template-rows: min-content;
   align-content: center;
 }
+
 .share {
   display: flex;
   flex-direction: column;
@@ -219,6 +220,10 @@ setTimeout(async () => {
     justify-content: center;
 
     gap: calc(1.5 * var(--padding-size-base));
+  }
+
+  .share-background {
+    background-color: var(--color-background);
   }
 }
 </style>
