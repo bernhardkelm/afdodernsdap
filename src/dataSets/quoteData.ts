@@ -548,8 +548,6 @@ const quoteData: Quote[] = [
       },
     ],
     quote:
-      '„Neben dem Schutz unserer nationalen […] Außengrenzen wird ein großangelegtes Remigrationsprojekt notwendig sein. Und bei dem wird man, so fürchte ich, nicht um eine Politik der ‚wohltemperierten Grausamkeit‘ […] herumkommen.“', // TODO: klären ob zitat verlängert wird.
-    quoteDisplay:
       '„Neben dem Schutz unserer nationalen […] Außengrenzen wird ein großangelegtes Remigrationsprojekt notwendig sein. Und bei dem wird man, so fürchte ich, nicht um eine Politik der ‚wohltemperierten Grausamkeit‘ […] herumkommen.“',
     owner: [
       {
@@ -1044,7 +1042,7 @@ const quoteData: Quote[] = [
         person: people[People.BERND_BAUMANN],
         saidOn: '29.01.2024',
         context:
-          'Während der 209. Sitzung des Bundestages nach der Billiging des Fünf-Punkte-Plan der Union zu Migration',
+          'Während der 209. Sitzung des Bundestages nach der Billigung des Fünf-Punkte-Plan der Union zu Migration',
       },
     ],
     sources: [
