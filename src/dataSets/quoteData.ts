@@ -1042,7 +1042,7 @@ const quoteData: Quote[] = [
         person: people[People.BERND_BAUMANN],
         saidOn: '29.01.2024',
         context:
-          'Während der 209. Sitzung des Bundestages nach der Billigung des Fünf-Punkte-Plan der Union zu Migration',
+          'Während der 209. Sitzung des Bundestages nach der Billugung des Fünf-Punkte-Plan der Union zu Migration',
       },
     ],
     sources: [
