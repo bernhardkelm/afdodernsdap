@@ -124,7 +124,6 @@ setTimeout(() => {
   border-radius: calc(2 * var(--padding-size-base));
   box-shadow: var(--box-shadow-cards);
   padding: calc(5 * var(--padding-size-base));
-  min-height: 100%;
 
   .brand-card--content {
     display: flex;

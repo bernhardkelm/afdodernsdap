@@ -73,14 +73,14 @@ const shareContent = async () => {
     if (quotesStore.getCurrentScore() < 7) {
       shareText = `
         AfD oder NSDAP - wer hat es gesagt?
-        Ich habe ${quotesStore.getCurrentScore()} von ${quotesStore.answeredQuotesCount} Aussagen richtig zugeordnet - kannst du AfD und NSDAP genauso gut auseinander halten?
-        https://afdodernsdap.de/?utm_source=share&utm_medium=clipboard
+Ich habe ${quotesStore.getCurrentScore()} von ${quotesStore.answeredQuotesCount} Aussagen richtig zugeordnet - kannst du AfD und NSDAP genauso gut auseinander halten?
+https://afdodernsdap.de/?utm_source=share&utm_medium=clipboard
       `;
     } else {
       shareText = `
         AfD oder NSDAP - wer hat es gesagt?
-        Ich habe ${quotesStore.getCurrentScore()} von ${quotesStore.answeredQuotesCount} Aussagen richtig zugeordnet -  kannst du AfD und NSDAP besser auseinander halten?
-        https://afdodernsdap.de/?utm_source=share&utm_medium=clipboard
+Ich habe ${quotesStore.getCurrentScore()} von ${quotesStore.answeredQuotesCount} Aussagen richtig zugeordnet -  kannst du AfD und NSDAP besser auseinander halten?
+https://afdodernsdap.de/?utm_source=share&utm_medium=clipboard
       `;
     }
 
@@ -101,9 +101,9 @@ const shareContent = async () => {
       text:
         quotesStore.getCurrentScore() > 7
           ? `AfD oder NSDAP - wer hat es gesagt?
-        Ich habe ${quotesStore.getCurrentScore()} von ${quotesStore.answeredQuotesCount} Aussagen richtig zugeordnet - kannst du AfD und NSDAP genauso gut auseinander halten?`
+Ich habe ${quotesStore.getCurrentScore()} von ${quotesStore.answeredQuotesCount} Aussagen richtig zugeordnet - kannst du AfD und NSDAP genauso gut auseinander halten?`
           : `AfD oder NSDAP - wer hat es gesagt?
-        Ich habe ${quotesStore.getCurrentScore()} von ${quotesStore.answeredQuotesCount} Aussagen richtig zugeordnet -  kannst du AfD und NSDAP besser auseinander halten?`,
+Ich habe ${quotesStore.getCurrentScore()} von ${quotesStore.answeredQuotesCount} Aussagen richtig zugeordnet -  kannst du AfD und NSDAP besser auseinander halten?`,
       url: 'https://afdodernsdap.de/?utm_source=share&utm_medium=share',
     } as ShareData;
 
@@ -201,8 +201,9 @@ setTimeout(async () => {
 
 <style scoped>
 .share {
-  display: grid;
-  grid-template-rows: min-content min-content 1fr;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
 
   .card-button-wrapper {
     height: 100%;
