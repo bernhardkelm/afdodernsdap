@@ -145,59 +145,66 @@ setTimeout(async () => {
 </script>
 
 <template>
-  <div class="share" data-js-share>
-    <!-- Title Brand component -->
-    <BrandComponent  class="share-background"/>
-    <!-- Score Component -->
-    <ScoreComponent  class="share-background"/>
-    <!-- Brand Card wrapper -->
-    <BrandCardWrapper class="share-background">
-      <h3>
-        {{ quotesStore.getCurrentScore() }} von {{ quotesStore.answeredQuotesCount }} Aussagen
-        erkannt
-      </h3>
-      <template v-if="quotesStore.getCurrentScore() < 8">
-        <p>
-          Gar nicht einfach die Zitate der Mitglieder beider Parteien auseinanderzuhalten, oder?
-        </p>
-        <p>
-          Teile AfDoderNSDAP.de mit deinen Freundinnen und Freunden, damit mehr Menschen sehen, wie
-          erschreckend schwer es ist, die Aussagen korrekt zu unterscheiden.
-        </p>
-      </template>
-      <template v-else>
-        <p>Puh! Bist du so gut informiert oder hast du gut geraten?</p>
-        <p>
-          Teile AfDoderNSDAP.de, um herauszufinden, ob deine Freundinnen und Freunde genauso gut
-          Bescheid wissen – oder einfach, um ihnen zu zeigen, welche Aussagen sich in den Reihen der
-          AfD wiederfinden.
-        </p>
-      </template>
+  <div class="share-wrapper">
+    <div class="share" data-js-share>
+      <!-- Title Brand component -->
+      <BrandComponent class="share-background" />
+      <!-- Score Component -->
+      <ScoreComponent class="share-background" />
+      <!-- Brand Card wrapper -->
+      <BrandCardWrapper class="share-background">
+        <h3>
+          {{ quotesStore.getCurrentScore() }} von {{ quotesStore.answeredQuotesCount }} Aussagen
+          erkannt
+        </h3>
+        <template v-if="quotesStore.getCurrentScore() < 8">
+          <p>
+            Gar nicht einfach die Zitate der Mitglieder beider Parteien auseinanderzuhalten, oder?
+          </p>
+          <p>
+            Teile AfDoderNSDAP.de mit deinen Freundinnen und Freunden, damit mehr Menschen sehen,
+            wie erschreckend schwer es ist, die Aussagen korrekt zu unterscheiden.
+          </p>
+        </template>
+        <template v-else>
+          <p>Puh! Bist du so gut informiert oder hast du gut geraten?</p>
+          <p>
+            Teile AfDoderNSDAP.de, um herauszufinden, ob deine Freundinnen und Freunde genauso gut
+            Bescheid wissen – oder einfach, um ihnen zu zeigen, welche Aussagen sich in den Reihen
+            der AfD wiederfinden.
+          </p>
+        </template>
 
-      <div class="card-button-wrapper">
-        <Button
-          :icon="isGeneratingImage === true ? 'loading' : hasShareAPI ? 'share' : 'copy'"
-          :iconAnimation="isGeneratingImage === true ? 'spin' : 'undefined'"
-          @click="shareContent()"
-          @keydown.enter="shareContent()"
-          tabindex="1"
-        >
-          {{ shareButtonText }}
-        </Button>
-        <Button
-          icon="rewind"
-          @click="router.push({ name: ROUTE_NAMES.QUIZ })"
-          @keydown.enter="router.push({ name: ROUTE_NAMES.QUIZ })"
-          tabindex="1"
-        >
-          Nochmal probieren
-        </Button>
-      </div>
-    </BrandCardWrapper>
+        <div class="card-button-wrapper">
+          <Button
+            :icon="isGeneratingImage === true ? 'loading' : hasShareAPI ? 'share' : 'copy'"
+            :iconAnimation="isGeneratingImage === true ? 'spin' : 'undefined'"
+            @click="shareContent()"
+            @keydown.enter="shareContent()"
+            tabindex="1"
+          >
+            {{ shareButtonText }}
+          </Button>
+          <Button
+            icon="rewind"
+            @click="router.push({ name: ROUTE_NAMES.QUIZ })"
+            @keydown.enter="router.push({ name: ROUTE_NAMES.QUIZ })"
+            tabindex="1"
+          >
+            Nochmal probieren
+          </Button>
+        </div>
+      </BrandCardWrapper>
+    </div>
   </div>
 </template>
 
 <style scoped>
+.share-wrapper {
+  grid-template-rows: min-content;
+  align-content: center;
+}
+
 .share {
   display: flex;
   flex-direction: column;
