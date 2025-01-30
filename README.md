@@ -1,5 +1,7 @@
 # afdodernsdap
 
+Ein Projekt zur politischen Aufklärung
+
 ## Über das Projekt
 
 ### Wer wird verglichen?
