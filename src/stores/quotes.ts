@@ -91,11 +91,11 @@ export const useQuotesStore = defineStore('quotes', () => {
     const afdPartyQuotes = quotes.value
       .filter((quote) => quoteContainsOnlyOneParty(quote, Parties.AFD))
       .sort(() => Math.random() - 0.5)
-      .slice(0, 4);
+      .slice(0, 5);
     const nsdapPartyQuotes = quotes.value
       .filter((quote) => quoteContainsOnlyOneParty(quote, Parties.NSDAP))
       .sort(() => Math.random() - 0.5)
-      .slice(0, 5);
+      .slice(0, 3);
 
     // Get 1 quote with two parties
     const quoteWithTwoPartiesShuffled = quotes.value
