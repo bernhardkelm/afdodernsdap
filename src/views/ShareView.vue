@@ -71,14 +71,12 @@ const shareContent = async () => {
     let shareText = '';
 
     if (quotesStore.getCurrentScore() < 7) {
-      shareText = `
-        AfD oder NSDAP - wer hat es gesagt?
+      shareText = `AfD oder NSDAP - wer hat es gesagt?
 Ich habe ${quotesStore.getCurrentScore()} von ${quotesStore.answeredQuotesCount} Aussagen richtig zugeordnet - kannst du AfD und NSDAP genauso gut auseinander halten?
 https://afdodernsdap.de/?utm_source=share&utm_medium=clipboard
       `;
     } else {
-      shareText = `
-        AfD oder NSDAP - wer hat es gesagt?
+      shareText = `AfD oder NSDAP - wer hat es gesagt?
 Ich habe ${quotesStore.getCurrentScore()} von ${quotesStore.answeredQuotesCount} Aussagen richtig zugeordnet -  kannst du AfD und NSDAP besser auseinander halten?
 https://afdodernsdap.de/?utm_source=share&utm_medium=clipboard
       `;
