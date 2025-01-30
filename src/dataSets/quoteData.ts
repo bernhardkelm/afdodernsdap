@@ -589,7 +589,7 @@ const quoteData: Quote[] = [
         person: people[People.OLIVER_KIRCHNER],
         saidOn: '23.03.2023',
         context:
-          'Während einer Debatte zum 90. Jahrestag des Ermächtigungsgesetzes. Kirchner kritisierte, dass frühere Mitglieder der „Altparteien“ in teilen NSDAP-Mitglieder waren, dies in der Debatte aber nicht zur Sprache kam. Er und seine Fraktion hätten als einzige diese Debatte „vorurteilsfrei hätte beantragen können“. Seine Fraktion empfinde sich auch nicht als rechtsextremistisch, wie laut Ihm in der Beantragung der Debatte suggeriert werde.',
+          'Während einer Debatte zum 90. Jahrestag des Ermächtigungsgesetzes. Kirchner kritisierte, dass frühere Mitglieder der „Altparteien“ in teilen NSDAP-Mitglieder waren, dies in der Debatte aber nicht zur Sprache kam. Seine Fraktion wären die einzigen, die diese Debatte „vorurteilsfrei hätte beantragen können“. Seine Fraktion empfinde sich auch nicht als rechtsextremistisch, wie laut Ihm in der Beantragung suggeriert werde.',
       },
       {
         person: people[People.JOSEPH_GOEBBELS],
