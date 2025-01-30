@@ -1,0 +1,10 @@
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="dangerous">
+<mask id="mask0_173_913" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="20">
+<rect id="Bounding box" x="0.649994" width="20" height="20" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_173_913)">
+<path id="dangerous_2" d="M7.75416 17L3.64999 12.875V7.10417L7.75416 3H13.5458L17.65 7.10417V12.8958L13.525 17H7.75416ZM8.42083 13.2708L10.65 11.0625L12.8792 13.2708L13.9208 12.2292L11.7125 10L13.9208 7.77083L12.8792 6.72917L10.65 8.9375L8.42083 6.72917L7.37916 7.77083L9.58749 10L7.37916 12.2292L8.42083 13.2708ZM8.37916 15.5H12.9208L16.15 12.2708V7.72917L12.9 4.5H8.37916L5.14999 7.72917V12.2708L8.37916 15.5Z" fill="black"/>
+</g>
+</g>
+</svg>
