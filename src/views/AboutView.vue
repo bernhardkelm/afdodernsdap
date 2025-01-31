@@ -4,6 +4,7 @@ import { changeRoute } from '@/helpers/changeRoute';
 
 // Components
 import TextPageWrapper from '@/components/TextPageWrapper.vue';
+import Button from '@/components/helper/ButtonComponent.vue';
 </script>
 
 <template>
@@ -98,6 +99,19 @@ import TextPageWrapper from '@/components/TextPageWrapper.vue';
         Aber auch im Alltag gilt: Werdet laut, stellt euch gegen Diskriminierung und Hass, und helft
         dabei, ein Bewusstsein dafür zu schaffen, wie politische Sprache unsere Gesellschaft prägt.
       </p>
+      <p>
+        Teile dieses Projekt gerne auf deinen Social Media Kanälen, dafür haben wir einige Vorlagen
+        und Sticker für die vorbereitet.
+      </p>
+      <Button
+        @click="changeRoute($event, ROUTE_NAMES.DOWNLOADS)"
+        :href="ROUTE_PATHS.DOWNLOADS"
+        icon="download"
+        as="a"
+        tabindex="1"
+      >
+        Social Media Grafiken und Sticker
+      </Button>
     </section>
     <section>
       <h2>Ihr wollt mit uns in Kontakt treten?</h2>

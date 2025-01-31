@@ -162,8 +162,8 @@ setTimeout(async () => {
             Gar nicht einfach die Zitate der Mitglieder beider Parteien auseinanderzuhalten, oder?
           </p>
           <p>
-            Teile AfDoderNSDAP.de mit deinen Freundinnen und Freunden, damit mehr Menschen sehen,
-            wie erschreckend schwer es ist, die Aussagen korrekt zu unterscheiden.
+            Teile AfDoderNSDAP.de mit deinen Freund*innen, damit mehr Menschen sehen, wie
+            erschreckend schwer es ist, die Aussagen korrekt zu unterscheiden.
           </p>
         </template>
         <template v-else>

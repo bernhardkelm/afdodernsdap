@@ -3,15 +3,17 @@ import HomeView from '@/views/HomeView.vue';
 import QuizView from '@/views/QuizView.vue';
 import ShareView from '@/views/ShareView.vue';
 import ImprintView from '@/views/ImprintView.vue';
-import AbioutView from '@/views/AboutView.vue';
+import AboutView from '@/views/AboutView.vue';
 import SourcesView from '@/views/SourcesView.vue';
 import GdprView from '@/views/GdprView.vue';
+import DownloadsView from '@/views/DownloadsView.vue';
 
 export enum ROUTE_NAMES {
   HOME = 'HOME',
   QUIZ = 'QUIZ',
   SHARE = 'SHARE',
   IMPRINT = 'IMPRINT',
+  DOWNLOADS = 'DOWNLOADS',
   ABOUT = 'ABOUT',
   SOURCES = 'SOURCES',
   GDPR = 'GDPR',
@@ -23,6 +25,7 @@ export enum ROUTE_PATHS {
   SHARE = '/share',
   IMPRINT = '/impressum',
   ABOUT = '/about',
+  DOWNLOADS = '/downloads',
   SOURCES = '/quellen',
   GDPR = '/datenschutz',
 }
@@ -51,7 +54,12 @@ const routes = [
   {
     path: ROUTE_PATHS.ABOUT,
     name: ROUTE_NAMES.ABOUT,
-    component: AbioutView,
+    component: AboutView,
+  },
+  {
+    path: ROUTE_PATHS.DOWNLOADS,
+    name: ROUTE_NAMES.DOWNLOADS,
+    component: DownloadsView,
   },
   {
     path: ROUTE_PATHS.SOURCES,
