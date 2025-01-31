@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import IconComponent from './helper/IconComponent.vue';
 
 // Refs
 const isLoaded = ref(false);
@@ -21,7 +22,14 @@ setTimeout(() => {
       <div class="brand-card--content">
         <slot></slot>
       </div>
-      <small aria-hidden="true">AfDoderNSDAP.de</small>
+      <div class="brand-card--footer">
+        <small aria-hidden="true">AfDoderNSDAP.de</small>
+        <small>
+          <a href="https://www.instagram.com/afdodernsdap/" target="_blank" alt="Instagram">
+            Folgt uns! <IconComponent name="instagram" />
+          </a>
+        </small>
+      </div>
     </div>
   </section>
 </template>
@@ -133,6 +141,17 @@ setTimeout(() => {
 
     .icon {
       margin-right: calc(2 * var(--padding-size-base));
+    }
+  }
+
+  .brand-card--footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a {
+      display: flex;
+      gap: var(--padding-size-base);
     }
   }
 }
