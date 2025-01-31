@@ -10,6 +10,15 @@ import { useQuotesStore } from '@/stores/quotes';
 
 const quotesStore = useQuotesStore();
 
+// Props
+interface ScoreComponentProps {
+  isInteractable: boolean;
+}
+
+const props = withDefaults(defineProps<ScoreComponentProps>(), {
+  isInteractable: false,
+});
+
 // Methods
 /**
  * Check if the quote contains a specific party.
@@ -37,6 +46,10 @@ const pillTextContent = (quote: SelectedQuote): string => {
 
   return quoteContainsParty(quote, Parties.NSDAP) ? 'N' : 'A';
 };
+
+const highlightQuote = (quote: SelectedQuote): void => {
+  quotesStore.currentlyHighlightedQuote = quote;
+};
 </script>
 
 <template>
@@ -44,7 +57,11 @@ const pillTextContent = (quote: SelectedQuote): string => {
     <div class="score-bar" v-for="(quote, index) in quotesStore.selectedQuotes" :key="index">
       <div class="score-bar-inner">
         <!-- Display the answer pill -->
-        <span class="score-bar-pill">
+        <span
+          class="score-bar-pill"
+          :class="{ isInteractable: props.isInteractable }"
+          @click="props.isInteractable && highlightQuote(quote)"
+        >
           <span v-if="!quote.selectedAnswer" class="score-bar-pill-default">
             {{ pillTextContent(quote) }}
           </span>
@@ -100,6 +117,10 @@ const pillTextContent = (quote: SelectedQuote): string => {
       color: var(--color-white);
       border-radius: var(--padding-size-base);
       font-size: var(--font-size-small);
+
+      &.isInteractable {
+        cursor: pointer;
+      }
 
       & > span {
         position: absolute;

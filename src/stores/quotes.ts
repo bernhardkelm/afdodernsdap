@@ -24,6 +24,8 @@ export const useQuotesStore = defineStore('quotes', () => {
   const cardFrontRef = ref<HTMLElement | null>(null);
   const cardBackRef = ref<HTMLElement | null>(null);
 
+  const currentlyHighlightedQuote = ref<SelectedQuote | null>(null);
+
   const setCardRefs = (front: Ref<HTMLElement | null>, back: Ref<HTMLElement | null>) => {
     cardFrontRef.value = front.value;
     cardBackRef.value = back.value;
@@ -110,11 +112,12 @@ export const useQuotesStore = defineStore('quotes', () => {
       ...quoteWithTwoPartiesShuffled,
     ].sort(() => Math.random() - 0.5);
 
+    // @TODO: Remove testing code
     const shuffledQuotesWithAnswer: SelectedQuote[] = shuffledQuotes.map(
       (quote): SelectedQuote => ({
         ...quote,
-        selectedAnswer: null,
-        dismissed: null,
+        selectedAnswer: Parties.AFD,
+        dismissed: true,
       }),
     );
     selectedQuotes.value = shuffledQuotesWithAnswer.slice(0, 10);
@@ -225,6 +228,9 @@ export const useQuotesStore = defineStore('quotes', () => {
     lastAnsweredQuote,
     sortedQuoteSources,
     answeredQuotesCount,
+    cardFrontRef,
+    cardBackRef,
+    currentlyHighlightedQuote,
     generateQuoteBlocks,
     solveCurrentQuote,
     dismissCurrentCard,
@@ -232,7 +238,5 @@ export const useQuotesStore = defineStore('quotes', () => {
     lastAnsweredQuoteContainsParty,
     lastAnsweredQuoteWasCorrect,
     setCardRefs,
-    cardFrontRef,
-    cardBackRef,
   };
 });

@@ -126,6 +126,8 @@ Ich habe ${quotesStore.getCurrentScore()} von ${quotesStore.answeredQuotesCount}
   }
 };
 
+// @TODO: Remove testing code
+quotesStore.generateQuoteBlocks();
 // Misc functions
 if (quotesStore.selectedQuotes.length === 0) {
   // Redirect to main page if no questions have been answered...
@@ -150,13 +152,18 @@ setTimeout(async () => {
       <!-- Title Brand component -->
       <BrandComponent class="share-background" />
       <!-- Score Component -->
-      <ScoreComponent class="share-background" />
+      <ScoreComponent class="share-background" isInteractable />
       <!-- Brand Card wrapper -->
-      <BrandCardWrapper class="share-background">
+      <BrandCardWrapper
+        class="share-background"
+        v-if="quotesStore.currentlyHighlightedQuote === null"
+      >
         <h3>
           {{ quotesStore.getCurrentScore() }} von {{ quotesStore.answeredQuotesCount }} Aussagen
           erkannt
         </h3>
+        {{ quotesStore.currentlyHighlightedQuote?.quote }}
+
         <template v-if="quotesStore.getCurrentScore() < 8">
           <p>
             Gar nicht einfach die Zitate der Mitglieder beider Parteien auseinanderzuhalten, oder?
@@ -195,6 +202,9 @@ setTimeout(async () => {
           </Button>
         </div>
       </BrandCardWrapper>
+      <template v-else>
+        {{ quotesStore.currentlyHighlightedQuote?.quote }}
+      </template>
     </div>
   </div>
 </template>
