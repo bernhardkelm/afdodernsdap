@@ -15,7 +15,7 @@ store.generateQuoteBlocks();
 <template>
   <main class="quiz">
     <!-- Score wrapper -->
-    <Score />
+    <Score :isInteractable="false" />
 
     <!-- Quote card wrapper -->
     <QuoteWrapper />
