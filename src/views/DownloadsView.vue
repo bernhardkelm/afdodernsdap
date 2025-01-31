@@ -13,7 +13,7 @@ import SocialDownload from '@/components/helper/SocialDownloadComponent.vue';
     <h1>Downloads</h1>
     <section>
       <p>
-        <strong>Mach mit und teile das Projekt mit Anderen!</strong>
+        <strong>Mach mit und teile das Projekt mit anderen!</strong>
       </p>
       <p>
         Dafür haben wir dir Social Media Grafiken und Sticker vorbereitet, die du dir hier
