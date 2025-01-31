@@ -16,9 +16,9 @@ import SocialDownload from '@/components/helper/SocialDownloadComponent.vue';
         <strong>Mach mit und teile das Projekt mit Anderen!</strong>
       </p>
       <p>
-        Dafür haben wir dir einige Social Media Grafiken und Sticker vorbereitet, die du dir hier
+        Dafür haben wir dir Social Media Grafiken und Sticker vorbereitet, die du dir hier
         herunterladen kannst.<br />
-        Folge uns auf Instagram erwähne uns in deiner Story:
+        Folge uns auch auf Instagram erwähne uns in deiner Story:
         <a href="https://www.instagram.com/afdodernsdap/">@afdodernsdap</a>.
       </p>
     </section>

@@ -100,8 +100,8 @@ import Button from '@/components/helper/ButtonComponent.vue';
         dabei, ein Bewusstsein dafür zu schaffen, wie politische Sprache unsere Gesellschaft prägt.
       </p>
       <p>
-        Teile dieses Projekt gerne auf deinen Social Media Kanälen, dafür haben wir einige Vorlagen
-        und Sticker für die vorbereitet.
+        Teile dieses Projekt auf deinen Social Media Kanälen, dafür haben wir einige Vorlagen und
+        Sticker für die vorbereitet.
       </p>
       <Button
         @click="changeRoute($event, ROUTE_NAMES.DOWNLOADS)"
