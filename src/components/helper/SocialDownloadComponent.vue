@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Button from '@/components/helper/ButtonComponent.vue';
 
+// Props
 interface SocialDownloadProps {
   imagePath: string;
   pdfPath?: string;
