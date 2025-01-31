@@ -306,6 +306,46 @@ const calculateSelectionConfidence = () => {
 };
 
 /**
+ * Handles the key down event
+ * @param {KeyboardEvent} event - The key down event
+ * @returns {void}
+ */
+const handleKeyDownEvent = (event: KeyboardEvent) => {
+  if (event.key === 'ArrowLeft') {
+    emit('confidenceUpdate', {
+      direction: SwipeDirections.LEFT,
+      confidence: 100,
+    } as SwipeConfidence);
+  } else if (event.key === 'ArrowRight') {
+    emit('confidenceUpdate', {
+      direction: SwipeDirections.RIGHT,
+      confidence: 100,
+    } as SwipeConfidence);
+  }
+};
+
+/**
+ * Handles the key up event
+ * @param {KeyboardEvent} event - The key up event
+ * @returns {void}
+ */
+const handleKeyUpEvent = (event: KeyboardEvent) => {
+  if (event.key === 'ArrowLeft') {
+    emit('solve-left');
+  } else if (event.key === 'ArrowRight') {
+    emit('solve-right');
+  }
+
+  if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    resetCardStatus({} as MouseEvent);
+    emit('confidenceUpdate', {
+      direction: SwipeDirections.LEFT,
+      confidence: 0,
+    } as SwipeConfidence);
+  }
+};
+
+/**
  * Updates the animation frame
  * @returns {void}
  */
@@ -346,6 +386,10 @@ watch(currentY, updateAnimationFrame);
 watch(isScrolling, () => emit('isScrolling', isScrolling.value), { immediate: true });
 watch(isMouseDragging, () => emit('isMouseDragging', isMouseDragging.value), { immediate: true });
 
+// Adding keyboard support for selecting a party
+document.body.addEventListener('keyup', handleKeyUpEvent);
+document.body.addEventListener('keydown', handleKeyDownEvent);
+
 onBeforeUnmount(async () => {
   resetCardStatus({} as MouseEvent);
   resetCardStatus({} as TouchEvent);
@@ -354,6 +398,10 @@ onBeforeUnmount(async () => {
     direction: getCurrentSwipeStatus()?.direction,
     confidence: 0,
   } as SwipeConfidence);
+
+  // Removing keyboard events on unmount
+  document.body.removeEventListener('keyup', handleKeyUpEvent);
+  document.body.removeEventListener('keydown', handleKeyDownEvent);
 });
 </script>
 
