@@ -230,7 +230,7 @@ const quoteData: Quote[] = [
     owner: [
       {
         person: people[People.BJOERN_HOECKE],
-        saidOn: '11.2025',
+        saidOn: '11.2015',
       },
     ],
     sources: [
