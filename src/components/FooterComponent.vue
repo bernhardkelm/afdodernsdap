@@ -16,7 +16,7 @@ import { ROUTE_NAMES, ROUTE_PATHS } from '@/router/index';
     </a>
     <div class="footer-imprint">
       <a :href="ROUTE_PATHS.SOURCES" @click="changeRoute($event, ROUTE_NAMES.SOURCES)" tabindex="2"
-        >Stand: 30.01.2025</a
+        >Stand: 01.02.2025</a
       >
       <a :href="ROUTE_PATHS.IMPRINT" @click="changeRoute($event, ROUTE_NAMES.IMPRINT)" tabindex="2">
         Impressum

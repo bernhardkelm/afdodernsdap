@@ -44,7 +44,11 @@ import SourceCollection from '@/components/sources/SourceCollection.vue';
       </p>
       <ul>
         <li>
-          Bisher wurden seit der Veröffentlichung keine Änderungen an den Quellen vorgenommen.
+          01.02.2025: Korrektur eines Tippfehlers durch den ein Zitat „Wir müssen unsere
+          Männlichkeit wieder entdecken. Denn nur wenn wir unsere Männlichkeit wiederentdecken,
+          werden wir mannhaft. Und nur wenn wir mannhaft werden, werden wir wehrhaft, und wir müssen
+          wehrhaft werden, liebe Freunde!“ [Jac2015] fälschlicherweise auf 11.2025 anstatt auf
+          11.2025 datiert wurde.
         </li>
       </ul>
     </section>
