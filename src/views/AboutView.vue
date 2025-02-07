@@ -106,7 +106,7 @@ import Button from '@/components/helper/ButtonComponent.vue';
       <Button
         @click="changeRoute($event, ROUTE_NAMES.DOWNLOADS)"
         :href="ROUTE_PATHS.DOWNLOADS"
-        icon="download"
+        icon="image"
         as="a"
         tabindex="1"
       >
