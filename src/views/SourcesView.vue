@@ -44,6 +44,10 @@ import SourceCollection from '@/components/sources/SourceCollection.vue';
       </p>
       <ul>
         <li>
+          <b>10.02.2025 //</b> Korrektur eines Tippfehlers im Zitat „Das deutsche Volk ist nicht
+          länger mehr gewillt, sich zu beugen!“: Ergänzung eines fehlenden Kommas
+        </li>
+        <li>
           <b>01.02.2025 //</b> Korrektur eines Tippfehlers bei der Datierung des Zitates „Wir müssen
           unsere Männlichkeit wieder entdecken. Denn nur wenn wir unsere Männlichkeit
           wiederentdecken, werden wir mannhaft. Und nur wenn wir mannhaft werden, werden wir

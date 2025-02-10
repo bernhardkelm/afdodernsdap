@@ -353,7 +353,7 @@ const quoteData: Quote[] = [
   },
   {
     // QUOTE-23
-    quote: '„Das deutsche Volk ist nicht länger mehr gewillt sich zu beugen!“',
+    quote: '„Das deutsche Volk ist nicht länger mehr gewillt, sich zu beugen!“',
     owner: [
       {
         person: people[People.ADOLF_HITLER],
