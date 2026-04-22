@@ -1,0 +1,21 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-gitlab:
+    name: Trigger GitLab pipeline
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger pipeline
+        run: |
+          curl -X POST \
+            --fail-with-body \
+            -F token=${{ secrets.GITLAB_TRIGGER_TOKEN }} \
+            -F ref=main \
+            -F "variables[DEPLOY_ENV]=staging" \
+            "${{ secrets.GITLAB_TRIGGER_URL }}"
