@@ -7,11 +7,11 @@ on:
 
 jobs:
   trigger-gitlab:
-    name: Trigger GitLab pipeline
+    name: Trigger GitLab Deployment pipeline
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger pipeline
+      - name: Trigger GitLab Deployment pipeline
         run: |
           curl -X POST \
             --fail-with-body \
