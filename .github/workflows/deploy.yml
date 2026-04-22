@@ -17,4 +17,5 @@ jobs:
             --fail-with-body \
             -F token=${{ secrets.GITLAB_TRIGGER_TOKEN }} \
             -F ref=main \
+            -F "variables[DEPLOY_ENV]=staging" \
             "${{ secrets.GITLAB_TRIGGER_URL }}"

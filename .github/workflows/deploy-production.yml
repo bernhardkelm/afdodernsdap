@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+
+  trigger-gitlab:
+    name: Trigger GitLab pipeline
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger pipeline
+        run: |
+          curl -X POST \
+            --fail-with-body \
+            -F token=${{ secrets.GITLAB_TRIGGER_TOKEN }} \
+            -F ref=main \
+            -F "variables[DEPLOY_ENV]=production" \
+            -F "variables[GITHUB_TAG]=${{ github.ref_name }}" \
+            "${{ secrets.GITLAB_TRIGGER_URL }}"
