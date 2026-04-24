@@ -60,7 +60,7 @@ npm run start:dev
 npm run start:dev:host
 ```
 
-### #Type-Check, Compile and Minify for Production
+#### Type-Check, Compile and Minify for Production
 
 ```sh
 npm run build
