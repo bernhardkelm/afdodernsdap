@@ -44,6 +44,13 @@ import SourceCollection from '@/components/sources/SourceCollection.vue';
       </p>
       <ul>
         <li>
+          <b>17.05.2026 //</b> Behebung zweier Tippfehler (Andreas Gehlman → Gehlmann, Oliver Kirchner: Mdl → MdL)
+          sowie Aktualisierung und Korrektur der Positionen von Parteimitgliedern der AfD.
+          Maximilian Krah: MdEP (seit 2019) → MdEP (2019 bis 2025), MdB (seit 2025)
+          Beatrix von Storch: MdB (seit 2017), stellvertretende Bundessprecherin und Fraktionsvorsitzende der AfD → MdB (seit 2017), stellvertretende Vorsitzende der AfD-Bundestagsfraktion
+          Markus Frohnmaier: MdB (seit 2017), Co-Vorsitzender AfD-Landesverband Baden-Württemberg → MdB (seit 2017), Landesvorsitzender AfD Baden-Württemberg (seit 2022)
+        </li>
+        <li>
           <b>10.02.2025 //</b> Korrektur eines Tippfehlers im Zitat „Das deutsche Volk ist nicht
           länger mehr gewillt, sich zu beugen!“: Ergänzung eines fehlenden Kommas
         </li>

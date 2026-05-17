@@ -711,7 +711,7 @@ const quoteData: Quote[] = [
         title: 'ECLI:DE:BGH:2023:051023URIZ.R.1.23.0',
         date: '05.10.2023',
         publishingFormat: 'Urteil',
-        url: 'http://juris.bundesgerichtshof.de/cgi-bin/rechtsprechung/document.py?Gericht=bgh&Art=en&client=12&pos=0&anz=1&Blank=1.pdf&nr=135257',
+        url: 'https://juris.bundesgerichtshof.de/cgi-bin/rechtsprechung/document.py?Gericht=bgh&Art=en&client=12&pos=0&anz=1&Blank=1.pdf&nr=135257',
         lastAccessed: '27.01.2025',
       },
     ],
