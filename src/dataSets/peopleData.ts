@@ -25,7 +25,7 @@ export enum People {
 
 const people: Record<People, Person> = {
   [People.ANDREAS_GEHLMAN]: {
-    name: 'Andreas Gehlman',
+    name: 'Andreas Gehlmann',
     position: 'MdL Sachsen-Anhalt (2016 bis 2021)',
     party: Parties.AFD,
   },
@@ -36,7 +36,7 @@ const people: Record<People, Person> = {
   },
   [People.MARKUS_FROHNMAIER]: {
     name: 'Markus Frohnmaier',
-    position: 'MdB (seit 2017), Co-Vorsitzender AfD-Landesverband Baden-Württemberg',
+    position: 'MdB (seit 2017), Landesvorsitzender AfD Baden-Württemberg (seit 2022)',
     party: Parties.AFD,
   },
   [People.ANDREAS_WINHART]: {
@@ -56,7 +56,7 @@ const people: Record<People, Person> = {
   },
   [People.MAXIMILIAN_KRAH]: {
     name: 'Maximilian Krah',
-    position: 'MdEP (seit 2019)',
+    position: 'MdEP (2019 bis 2025), MdB (seit 2025)',
     party: Parties.AFD,
   },
   [People.HERMANN_GOERING]: {
@@ -106,7 +106,7 @@ const people: Record<People, Person> = {
   },
   [People.OLIVER_KIRCHNER]: {
     name: 'Oliver Kirchner',
-    position: 'Mdl Sachsen-Anhalt (seit 2018)',
+    position: 'MdL Sachsen-Anhalt (seit 2018)',
     party: Parties.AFD,
   },
   [People.BERND_BAUMANN]: {
@@ -116,7 +116,7 @@ const people: Record<People, Person> = {
   },
   [People.BEATRIX_VON_STORCH]: {
     name: 'Beatrix von Storch',
-    position: 'MdB (seit 2017), stellvertretende Bundessprecherin und Fraktionsvorsitzende der AfD',
+    position: 'MdB (seit 2017), stellvertretende Vorsitzende der AfD-Bundestagsfraktion',
     party: Parties.AFD,
   },
 };
