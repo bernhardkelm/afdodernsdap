@@ -13,7 +13,7 @@ import { changeRoute } from '@/helpers/changeRoute';
       <h3>Für „AfD oder NSDAP?“ verantwortlich</h3>
       <address>
         Bernhard Kelm<br />
-        c/o MDC Management#650<br />
+        c/o MDC Management#bernhardkelm<br />
         Welserstraße 3<br />
         87463 Dietmannsried<br />
         E-Mail:
