@@ -19,9 +19,8 @@ import { changeRoute } from '@/helpers/changeRoute';
         E-Mail:
         <a class="link" href="mailto:hallo@afdodernsdap.de" tabindex="1">hallo@afdodernsdap.de</a>
       </address>
-      <p>
-        Des Weiteren Sven Schäfermeier, Carlos Bystron, Finn Maybauer, Keno Hünseler, Florian
-        Bräunsbach und Benedikt Engel.
+      <p class="no-word-break">
+        Des Weiteren: Sven&nbsp;Schäfermeier, Carlos&nbsp;Bystron, Finn&nbsp;Maybauer, Keno&nbsp;Hünseler, Florian&nbsp;Bräunsbach und&nbsp;Benedikt&nbsp;Engel.
       </p>
     </section>
 
@@ -39,7 +38,7 @@ import { changeRoute } from '@/helpers/changeRoute';
         Die Inhalte unserer App/Website wurden mit größter Sorgfalt erstellt. Wir übernehmen jedoch
         keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten
         Inhalte. Jegliche Haftung für Schäden, die aus der Nutzung der Inhalte entstehen, ist –
-        soweit gesetzlich zulässig – ausgeschlossen
+        soweit gesetzlich zulässig – ausgeschlossen.
       </p>
       <p>
         Unsere App/Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen
@@ -57,13 +56,7 @@ import { changeRoute } from '@/helpers/changeRoute';
       <h2>Datenschutzerklärung</h2>
       <p>
         Unsere Datenschutzerklärung finden Sie
-        <a
-          class="link"
-          :href="ROUTE_PATHS.GDPR"
-          @click="changeRoute($event, ROUTE_NAMES.GDPR)"
-          tabindex="1"
-          >hier</a
-        >.
+        <a class="link" :href="ROUTE_PATHS.GDPR" @click="changeRoute($event, ROUTE_NAMES.GDPR)" tabindex="1">hier</a>.
       </p>
     </section>
   </TextPageWrapper>

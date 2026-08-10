@@ -52,20 +52,13 @@ const pillTextContent = (quote: SelectedQuote): string => {
             <span v-if="quoteContainsParty(quote, Parties.NSDAP)" class="score-bar-pill-nsdap">
               {{ pillTextContent(quote) }}
             </span>
-            <span
-              v-if="quoteContainsParty(quote, Parties.AFD)"
-              class="score-bar-pill-afd"
-              :class="{ isSplit: quoteContainsParty(quote, Parties.NSDAP) }"
-            >
+            <span v-if="quoteContainsParty(quote, Parties.AFD)" class="score-bar-pill-afd" :class="{ isSplit: quoteContainsParty(quote, Parties.NSDAP) }">
               {{ pillTextContent(quote) }}
             </span>
           </template>
         </span>
 
-        <IconComponent
-          v-if="quote.selectedAnswer"
-          :name="quoteContainsParty(quote, quote.selectedAnswer) ? 'check' : 'dangerous'"
-        />
+        <IconComponent v-if="quote.selectedAnswer" :name="quoteContainsParty(quote, quote.selectedAnswer) ? 'check' : 'dangerous'" />
         <IconComponent v-else name="empty" />
       </div>
     </div>
@@ -94,14 +87,14 @@ const pillTextContent = (quote: SelectedQuote): string => {
     .score-bar-pill {
       position: relative;
       overflow: hidden;
-      height: calc(3.5 * var(--font-size-base));
-      width: calc(5 * var(--padding-size-base));
+      height: calc(var(--font-size-small) + 0.1rem);
+      width: calc(5.5 * var(--padding-size-base));
       background: var(--color-background-tertiary);
       color: var(--color-white);
       border-radius: var(--padding-size-base);
       font-size: var(--font-size-small);
 
-      & > span {
+      &>span {
         position: absolute;
         left: 0;
         top: 0;

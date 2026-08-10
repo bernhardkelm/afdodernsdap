@@ -65,7 +65,7 @@ watch(
   min-height: 100dvh;
   display: grid;
   grid-template-rows: minmax(0, 1fr) min-content;
-  max-width: 450px;
+  max-width: 28.125rem;
 }
 .background-wrapper:focus {
   outline: none;

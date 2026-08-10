@@ -24,21 +24,22 @@
   --color-brand-afd-secondary: #e2001a;
   --color-brand-afd-text: #ffffff;
 
-  /* Size base variables */
-  --font-size-base: 4px;
-  --padding-size-base: 5px;
+  /* Size base variables (rem, not px, so they scale with the user's browser
+     font-size/zoom setting instead of ignoring it) */
+  --font-size-base: 0.25rem;
+  --padding-size-base: 0.3125rem;
 
   /* Font size variables */
-  /* 10px */
-  --font-size-small: calc(2.5 * var(--font-size-base));
+  /* 14px - a11y floor, was 10px */
+  --font-size-small: calc(3.5 * var(--font-size-base));
   /* 16px */
   --font-size-text: calc(4 * var(--font-size-base));
-  /* 22px */
-  --font-size-accent: calc(5.5 * var(--font-size-base));
-  /* 28px */
-  --font-size-subtitle: calc(7 * var(--font-size-base));
-  /* 38px */
-  --font-size-brand: calc(9.5 * var(--font-size-base));
+  /* 20px, was 22px */
+  --font-size-accent: calc(5 * var(--font-size-base));
+  /* 24px, was 28px */
+  --font-size-subtitle: calc(6 * var(--font-size-base));
+  /* 32px, was 38px */
+  --font-size-brand: calc(8 * var(--font-size-base));
 
 
   /* z-index */
@@ -125,4 +126,8 @@ h3 {
 
 small {
   font-size: var(--font-size-small);
+}
+
+.no-word-break {
+  word-break: keep-all;
 }
