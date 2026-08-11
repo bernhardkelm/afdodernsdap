@@ -52,13 +52,20 @@ const pillTextContent = (quote: SelectedQuote): string => {
             <span v-if="quoteContainsParty(quote, Parties.NSDAP)" class="score-bar-pill-nsdap">
               {{ pillTextContent(quote) }}
             </span>
-            <span v-if="quoteContainsParty(quote, Parties.AFD)" class="score-bar-pill-afd" :class="{ isSplit: quoteContainsParty(quote, Parties.NSDAP) }">
+            <span
+              v-if="quoteContainsParty(quote, Parties.AFD)"
+              class="score-bar-pill-afd"
+              :class="{ isSplit: quoteContainsParty(quote, Parties.NSDAP) }"
+            >
               {{ pillTextContent(quote) }}
             </span>
           </template>
         </span>
 
-        <IconComponent v-if="quote.selectedAnswer" :name="quoteContainsParty(quote, quote.selectedAnswer) ? 'check' : 'dangerous'" />
+        <IconComponent
+          v-if="quote.selectedAnswer"
+          :name="quoteContainsParty(quote, quote.selectedAnswer) ? 'check' : 'dangerous'"
+        />
         <IconComponent v-else name="empty" />
       </div>
     </div>
@@ -94,7 +101,7 @@ const pillTextContent = (quote: SelectedQuote): string => {
       border-radius: var(--padding-size-base);
       font-size: var(--font-size-small);
 
-      &>span {
+      & > span {
         position: absolute;
         left: 0;
         top: 0;

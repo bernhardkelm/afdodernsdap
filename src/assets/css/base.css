@@ -15,7 +15,6 @@
   --color-bg-next-button-hover: color-mix(in srgb, var(--color-white), transparent 70%);
   --color-link-hover: var(--color-brand-nsdap-primary);
 
-
   --color-brand-nsdap-primary: #dd0000;
   --color-brand-nsdap-secondary: #ffffff;
   --color-brand-nsdap-text: #000000;
@@ -40,7 +39,6 @@
   --font-size-subtitle: calc(6 * var(--font-size-base));
   /* 32px, was 38px */
   --font-size-brand: calc(8 * var(--font-size-base));
-
 
   /* z-index */
   --z-index-behind: 1;

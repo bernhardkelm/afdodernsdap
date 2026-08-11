@@ -20,7 +20,8 @@ import { changeRoute } from '@/helpers/changeRoute';
         <a class="link" href="mailto:hallo@afdodernsdap.de" tabindex="1">hallo@afdodernsdap.de</a>
       </address>
       <p class="no-word-break">
-        Des Weiteren: Sven&nbsp;Schäfermeier, Carlos&nbsp;Bystron, Finn&nbsp;Maybauer, Keno&nbsp;Hünseler, Florian&nbsp;Bräunsbach und&nbsp;Benedikt&nbsp;Engel.
+        Des Weiteren: Sven&nbsp;Schäfermeier, Carlos&nbsp;Bystron, Finn&nbsp;Maybauer,
+        Keno&nbsp;Hünseler, Florian&nbsp;Bräunsbach und&nbsp;Benedikt&nbsp;Engel.
       </p>
     </section>
 
@@ -56,7 +57,13 @@ import { changeRoute } from '@/helpers/changeRoute';
       <h2>Datenschutzerklärung</h2>
       <p>
         Unsere Datenschutzerklärung finden Sie
-        <a class="link" :href="ROUTE_PATHS.GDPR" @click="changeRoute($event, ROUTE_NAMES.GDPR)" tabindex="1">hier</a>.
+        <a
+          class="link"
+          :href="ROUTE_PATHS.GDPR"
+          @click="changeRoute($event, ROUTE_NAMES.GDPR)"
+          tabindex="1"
+          >hier</a
+        >.
       </p>
     </section>
   </TextPageWrapper>

@@ -45,8 +45,7 @@ watch(
     document.body.scrollTo(0, 0);
     top.value?.focus();
   },
-)
-
+);
 </script>
 
 <template>
