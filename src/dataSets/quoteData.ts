@@ -1,6 +1,15 @@
 import { type Quote } from '@/types/datasetTypes/Quote';
 import people, { People } from './peopleData';
-import { SourceType } from '@/types/datasetTypes/Source';
+import { SourceRole, SourceType } from '@/types/datasetTypes/Source';
+
+import {
+  BFV_GUTACHTEN_2025,
+  GFF_GUTACHTEN_2026,
+  LT_BAYERN_18_124,
+  MIK_BRANDENBURG_2025,
+  RIAS_2024,
+  TAGESSCHAU_AFD_JUGEND,
+} from './sharedSources';
 
 const quoteData: Quote[] = [
   {
@@ -1056,6 +1065,1052 @@ const quoteData: Quote[] = [
         url: 'https://dserver.bundestag.de/btp/20/20209.pdf',
         lastAccessed: '30.01.2025',
       },
+    ],
+  },
+  {
+    // QUOTE-100  (volksbegriff)
+    quote: '„Leute, nehmt die Kinder rein, die Zigeuner kommen!“',
+    owner: [
+      {
+        person: people[People.STEPHAN_BRANDNER],
+        saidOn: '27.12.2025',
+        context: 'Instagram-Beitrag zu einer eigenen Rede im Bundestag',
+      },
+    ],
+    sources: [
+      {
+        id: 'Bra2025',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Stephan Brandner'],
+        title: 'Instagram-Beitrag zu einer Rede im Bundestag',
+        date: '27.12.2025',
+        publishingFormat: 'Instagram-Beitrag',
+        url: 'https://www.instagram.com/p/DSwmF4ODVOc',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '1800' },
+    ],
+  },
+  {
+    // QUOTE-101  (sozialdarwinismus)
+    quote: '„ächzende Sozialsystem von parasitärem Befall befreien“',
+    quoteDisplay: '„[Ich will das] ächzende Sozialsystem von parasitärem Befall befreien.“',
+    owner: [
+      {
+        person: people[People.YVONNE_PRAUSE],
+        saidOn: '24.11.2024',
+        context: 'Rede auf dem Landesparteitag der AfD Brandenburg in Prenzlau',
+      },
+    ],
+    sources: [
+      {
+        id: 'Pra2024a',
+        type: SourceType.SPEECH,
+        role: SourceRole.PRIMARY,
+        authors: ['Yvonne Prause'],
+        title: 'Rede auf dem Landesparteitag der AfD Brandenburg',
+        date: '24.11.2024',
+        location: 'Prenzlau',
+        publishingFormat: 'Rede',
+        note: 'Wortlaut überliefert durch einen Bericht des Tagesspiegels; der Einstufungsvermerk des MIK Brandenburg nennt den 25.11.2024.',
+      },
+      MIK_BRANDENBURG_2025,
+      { ...GFF_GUTACHTEN_2026, page: '1831' },
+    ],
+  },
+  {
+    // QUOTE-102  (maennlichkeit)
+    quote: '„Jugend muss durch Jugend geführt werden.“',
+    owner: [
+      {
+        person: people[People.BJOERN_HOECKE],
+        saidOn: 'o.D.',
+        context:
+          'X-Beitrag über die neu gegründete AfD-Jugendorganisation. Denselben Leitsatz verwendete die Hitlerjugend.',
+      },
+    ],
+    sources: [
+      {
+        id: 'Hoc2025',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Björn Höcke'],
+        title: 'X-Beitrag zur neuen AfD-Jugendorganisation',
+        date: 'o.D.',
+        publishingFormat: 'X-Beitrag',
+        note: 'Das Gutachten datiert den Beitrag auf August 2025, ohne Tagesangabe.',
+      },
+      TAGESSCHAU_AFD_JUGEND,
+      { ...GFF_GUTACHTEN_2026, page: '122' },
+    ],
+  },
+  {
+    // QUOTE-103  (remigration)
+    quote:
+      '„Jeder Fremde mehr in diesem Land ist einer zu viel. Wir brauchen eine stringente Remigration von denen, die hier sind.“',
+    quoteDisplay: '„Jeder Fremde mehr in diesem Land ist einer zu viel. […]“',
+    owner: [
+      {
+        person: people[People.HANNES_GNAUCK],
+        saidOn: '23.09.2023',
+      },
+    ],
+    sources: [
+      {
+        id: 'Gna2023',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Hannes Gnauck'],
+        title: 'X-Beitrag',
+        date: '23.09.2023',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://x.com/Hannes_Gnauck/status/1705628027760038305',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '978' },
+    ],
+  },
+  {
+    // QUOTE-104  (volksbegriff)
+    quote:
+      '„Ich sage es ganz deutlich: diese Einbürgerungen sind illegal und müssen als solche nach der Wende überprüft und ggf. rückgängig gemacht werden. Wer noch nicht mal fließend deutsch spricht, kann NIEMALS Deutscher sein.“',
+    quoteDisplay: '„[…] Wer noch nicht mal fließend deutsch spricht, kann NIEMALS Deutscher sein.“',
+    owner: [
+      {
+        person: people[People.HANS_CHRISTOPH_BERNDT],
+        saidOn: '18.02.2025',
+        context: 'Repost einer Äußerung von Fabian Keubel',
+      },
+    ],
+    sources: [
+      {
+        id: 'Ber2025',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Hans-Christoph Berndt'],
+        title: 'X-Beitrag',
+        date: '18.02.2025',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://www.twitter.com/hcberndt/status/1892109307744841933',
+        lastAccessed: '10.08.2026',
+        note: 'Repost einer Äußerung von Fabian Keubel.',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '795' },
+    ],
+  },
+  {
+    // QUOTE-105  (gegnerbekaempfung)
+    quote: '„Ihr dürft euch nie die Zähne ziehen lassen. Gemeinsam müssen wir bissig bleiben.“',
+    owner: [
+      {
+        person: people[People.TINO_CHRUPALLA],
+        saidOn: '29.11.2025',
+        context: 'Rede zur Gründung der AfD-Jugendorganisation in Gießen',
+      },
+    ],
+    sources: [
+      {
+        id: 'Afd2025',
+        type: SourceType.VIDEO,
+        role: SourceRole.PRIMARY,
+        authors: ['AfD TV'],
+        title: 'Gründung AfD-Jugendorganisation live aus Gießen! – AfD TV',
+        date: '29.11.2025',
+        publishingFormat: 'YouTube Video',
+        url: 'https://www.youtube.com/watch?v=XHt20WuROPU&t=27228s',
+        lastAccessed: '10.08.2026',
+        timecode: '01:56:04',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '337' },
+    ],
+  },
+  {
+    // QUOTE-106  (lgbtiq)
+    quote:
+      '„Diese Gesellschaft ist totkrank. Wer die Zweigeschlechtlichkeit in Frage stellt, ist ein Feind des Lebens und ein Leugner der Schöpfung.“',
+    owner: [
+      {
+        person: people[People.CHRISTINA_BAUM],
+        saidOn: '31.01.2021',
+      },
+    ],
+    sources: [
+      {
+        id: 'Bau2021',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Christina Baum'],
+        title: 'Facebook-Beitrag',
+        date: '31.01.2021',
+        publishingFormat: 'Facebook-Beitrag',
+        url: 'https://www.facebook.com/drchristinabaum/posts/pfbid02GU3We5HN71NDyQ9T9wWLt88m8rGrVJcaAHrCK9aTuBR8NdV86fygDn3rBpqo8nucl',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '2609' },
+    ],
+  },
+  {
+    // QUOTE-107  (gegnerbekaempfung)
+    quote:
+      '„[W]ir müssen diese mit aller Härte beantworten. Die Losung der Stunde lautet: Remigration, und zwar millionenfache Remigration.“',
+    quoteDisplay:
+      '„[W]ir müssen diese mit aller Härte beantworten. Die Losung der Stunde lautet: […]“',
+    owner: [
+      {
+        person: people[People.SEBASTIAN_MUENZENMAIER],
+        saidOn: '09.11.2023',
+        context: 'Rede im Livestream der AfD-Bundestagsfraktion',
+      },
+    ],
+    sources: [
+      {
+        id: 'Afd2023',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['AfD im Bundestag'],
+        title: 'Facebook-Video der AfD-Bundestagsfraktion',
+        date: '09.11.2023',
+        publishingFormat: 'Facebook-Video',
+        url: 'https://www.facebook.com/afdimbundestag/videos/808674174345830/',
+        lastAccessed: '10.08.2026',
+        timecode: '04:34',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '57' },
+    ],
+  },
+  {
+    // QUOTE-108  (gegnerbekaempfung)
+    quote:
+      '„Freunde, ist der Ernstfall, offenkundig. Jetzt sind wir in das Stadium des Vorbürgerkriegs eingetreten.“',
+    quoteDisplay:
+      '„Freunde, [es] ist der Ernstfall, offenkundig. Jetzt sind wir in das Stadium des Vorbürgerkriegs eingetreten.“',
+    owner: [
+      {
+        person: people[People.BJOERN_HOECKE],
+        saidOn: '06.11.2023',
+        context: 'Rede bei Pegida auf dem Dresdner Schlossplatz',
+      },
+    ],
+    sources: [
+      {
+        id: 'Hoc2023',
+        type: SourceType.VIDEO,
+        role: SourceRole.PRIMARY,
+        authors: ['Björn Höcke'],
+        title: 'Rede bei Pegida auf dem Dresdner Schlossplatz',
+        date: '06.11.2023',
+        location: 'Dresden',
+        publishingFormat: 'YouTube Video',
+        url: 'https://www.youtube.com/watch?v=ixP-6BdomHc',
+        lastAccessed: '10.08.2026',
+        timecode: '00:30:08',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '2351' },
+    ],
+  },
+  {
+    // QUOTE-109  (gegnerbekaempfung)
+    quote:
+      '„In Deutschland werden Hunderttausende eingebürgert, die nicht mal hier sein dürften. Die Altparteien begehen ein Verbrechen am Volk, das seinesgleichen sucht. Wer stoppt diese Volksverräter?“',
+    quoteDisplay:
+      '„[Sie] begehen ein Verbrechen am Volk, das seinesgleichen sucht. Wer stoppt diese Volksverräter?“',
+    owner: [
+      {
+        person: people[People.GUNTRAM_PROSS],
+        saidOn: '13.06.2025',
+      },
+    ],
+    sources: [
+      {
+        id: 'Pro2025',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Guntram Proß'],
+        title: 'X-Beitrag',
+        date: '13.06.2025',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://www.twitter.com/guntrampross/status/1933546019737747508',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '2154' },
+    ],
+  },
+  {
+    // QUOTE-110  (volksbegriff)
+    quote:
+      '„Ich stehe hier, weil ich den Blicken meiner Kinder nicht ausweichen möchte, wenn sie mich eines Tages fragen, was hast du getan, was hast du getan, was hast du getan, als unser Volk zu sterben drohte.“',
+    quoteDisplay:
+      '„Ich stehe hier, weil ich den Blicken meiner Kinder nicht ausweichen möchte, wenn sie mich eines Tages fragen, was hast du getan, [...] als unser Volk zu sterben drohte.“',
+    owner: [
+      {
+        person: people[People.DANIEL_WALD],
+        saidOn: '03.12.2021',
+        context: 'Rede auf einer Demonstration',
+      },
+    ],
+    sources: [
+      {
+        id: 'Wal2021',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Daniel Wald'],
+        title: 'TikTok-Beitrag',
+        date: '03.12.2021',
+        publishingFormat: 'TikTok-Video',
+        url: 'https://tiktok.com/@danielwald.mdl/video/7037393221609065733',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '2115' },
+    ],
+  },
+  {
+    // QUOTE-111  (antisemitismus)
+    quote:
+      '„Die wirkliche Macht wird immer unsichtbarer und unkontrollierbarer. Die globalistische Krake hat an Nationen und Völkern kein Interesse.“',
+    quoteDisplay:
+      '„Die wirkliche Macht wird immer unsichtbarer und unkontrollierbarer. Die [...] Krake hat an Nationen und Völkern kein Interesse.“',
+    owner: [
+      {
+        person: people[People.ALEXANDER_GAULAND],
+        saidOn: '26.08.2019',
+        context: 'Rede auf einer Kundgebung im brandenburgischen Peitz',
+      },
+    ],
+    sources: [
+      {
+        id: 'Gau2019',
+        type: SourceType.SPEECH,
+        role: SourceRole.PRIMARY,
+        authors: ['Alexander Gauland'],
+        title: 'Rede auf einer Kundgebung in Peitz',
+        date: '26.08.2019',
+        location: 'Peitz',
+        publishingFormat: 'Rede',
+      },
+      RIAS_2024,
+      { ...GFF_GUTACHTEN_2026, page: '2760' },
+    ],
+  },
+  {
+    // QUOTE-112  (kampf)
+    quote:
+      '„Wir sollten all die Kriegstreiber sofort einziehen und an die Front schicken, bestenfalls ihre Kinder zuerst.“',
+    owner: [
+      {
+        person: people[People.HARALD_LAATSCH],
+        saidOn: '02.03.2025',
+      },
+    ],
+    sources: [
+      {
+        id: 'Laa2025',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Harald Laatsch'],
+        title: 'X-Beitrag',
+        date: '02.03.2025',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://x.com/haraldlaatsch/status/1896123203631923594',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '3034' },
+    ],
+  },
+  {
+    // QUOTE-113  (remigration)
+    quote: '„Entweder diese Invasion wird gestoppt – oder Europa ist tot.“',
+    owner: [
+      {
+        person: people[People.MAXIMILIAN_KRAH],
+        saidOn: '18.09.2023',
+      },
+    ],
+    sources: [
+      {
+        id: 'Kra2023a',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Maximilian Krah'],
+        title: 'X-Beitrag',
+        date: '18.09.2023',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://x.com/KrahMax/status/1703772609307873785',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '60' },
+    ],
+  },
+  {
+    // QUOTE-114  (muslimfeindlich)
+    quote: '„Invasion schrecklicher Wilder“',
+    quoteDisplay: '„[…] Invasion schrecklicher Wilder […]“',
+    owner: [
+      {
+        person: people[People.MAXIMILIAN_KRAH],
+        saidOn: '08.06.2023',
+      },
+    ],
+    sources: [
+      {
+        id: 'Kra2023b',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Maximilian Krah'],
+        title: 'X-Beitrag',
+        date: '08.06.2023',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://x.com/KrahMax/status/1666810666169298944',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '570' },
+    ],
+  },
+  {
+    // QUOTE-115  (muslimfeindlich)
+    quote:
+      '„Ich möchte diesen Abschaum hier nicht mehr haben. Gruppenvergewaltigungen. Jeden Tag zwei Gruppenvergewaltigungen. Was sind das für Barbaren?“',
+    quoteDisplay:
+      '„Ich möchte diesen Abschaum hier nicht mehr haben. [...] Was sind das für Barbaren?“',
+    owner: [
+      {
+        person: people[People.LEYLA_BILGE],
+        saidOn: '21.01.2025',
+      },
+    ],
+    sources: [
+      {
+        id: 'Bil2025',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Leyla Bilge'],
+        title: 'X-Beitrag',
+        date: '21.01.2025',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://x.com/Eure_LeylaBilge/status/1881713934018982380',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '937' },
+    ],
+  },
+  {
+    // QUOTE-116  (muslimfeindlich)
+    quote:
+      '„Sie verachten unser Land, und sie zeigen es, indem sie unsere Kinder schänden. Vergewaltigung ist seit Tausenden von Jahren eine Waffe im Krieg.“',
+    quoteDisplay:
+      '„Sie verachten unser Land, und sie zeigen es, indem sie unsere Kinder schänden. [...]“',
+    owner: [
+      {
+        person: people[People.MARTIN_BOEHM],
+        saidOn: '16.04.2024',
+        context: 'Facebook-Beitrag über die Vergewaltigung Minderjähriger',
+      },
+    ],
+    sources: [
+      {
+        id: 'Boh2024',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Martin Böhm'],
+        title: 'Facebook-Beitrag',
+        date: '16.04.2024',
+        publishingFormat: 'Facebook-Beitrag',
+        url: 'https://www.facebook.com/boehm2017/posts/pfbid02BMnCbG5zycn4ANoq96Xcq8jgh75bTTX3zuqhbaGR9ZDXUXvvkZpiZ4dHzaVRHfgfl',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '570' },
+    ],
+  },
+  {
+    // QUOTE-117  (gegnerbekaempfung)
+    quote:
+      '„Die Bundesregierung bekämpft die demokratische Opposition, finanziert mit Steuergeld. Genau wie früher. Die Rotfront marschiert mal wieder. Deutschland auf dem Weg in die Scholz Diktatur?“',
+    quoteDisplay: '„[…] Die Rotfront marschiert mal wieder. […]“',
+    owner: [
+      {
+        person: people[People.GUNNAR_LINDEMANN],
+        saidOn: '19.01.2024',
+      },
+    ],
+    sources: [
+      {
+        id: 'Lin2024',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Gunnar Lindemann'],
+        title: 'X-Beitrag',
+        date: '19.01.2024',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://x.com/AfDLindemann/status/1748417272408863094',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '2849' },
+    ],
+  },
+  {
+    // QUOTE-118  (geschichtsrevision)
+    quote: '„Schluss mit dem Schuldkult und endlich an die eigenen Opfer erinnern!“',
+    owner: [
+      {
+        person: people[People.MATTHIAS_HELFERICH],
+        saidOn: '09.05.2025',
+      },
+    ],
+    sources: [
+      {
+        id: 'Hel2025',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Matthias Helferich'],
+        title: 'Telegram-Beitrag',
+        date: '09.05.2025',
+        publishingFormat: 'Telegram-Beitrag',
+        url: 'https://t.me/matthiashelferich/1304',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '1279' },
+    ],
+  },
+  {
+    // QUOTE-119  (geschichtsrevision)
+    quote:
+      '„Der Schuldkult hat bei diesen Menschen schwersten Schaden angerichtet – sie sind Opfer eines geistigen Verbrechens, das seit Jahrzehnten am deutschen Volk begangen wird. Es ist Zeit für Selbstbefreiung und Heilung!“',
+    quoteDisplay:
+      '„Der Schuldkult hat bei diesen Menschen schwersten Schaden angerichtet – sie sind Opfer eines geistigen Verbrechens, das seit Jahrzehnten am deutschen Volk begangen wird. Es ist Zeit für Selbstbefreiung und Heilung!“',
+    owner: [
+      {
+        person: people[People.SIMON_KUCHLBAUER],
+        saidOn: '16.02.2025',
+      },
+    ],
+    sources: [
+      {
+        id: 'Kuc2025',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Simon Kuchlbauer'],
+        title: 'Telegram-Beitrag',
+        date: '16.02.2025',
+        publishingFormat: 'Telegram-Beitrag',
+        url: 'https://t.me/simonkuchlbauer/1587',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '2785' },
+    ],
+  },
+  {
+    // QUOTE-120  (geschichtsrevision)
+    quote:
+      '„Diese dämliche Bewältigungspolitik, die lähmt uns heute noch viel mehr als zu Franz Josef Strauß Zeiten. Wir brauchen nichts anderes als eine erinnerungspolitische Wende um 180 Grad.“',
+    quoteDisplay:
+      '„Diese dämliche Bewältigungspolitik, die lähmt uns heute noch [...]. Wir brauchen nichts anderes als eine erinnerungspolitische Wende um 180 Grad.“',
+    owner: [
+      {
+        person: people[People.BJOERN_HOECKE],
+        saidOn: '18.01.2017',
+        context: 'Rede bei der Jungen Alternative in Dresden („Dresdner Gespräche“)',
+      },
+    ],
+    sources: [
+      {
+        id: 'Afd2017',
+        type: SourceType.VIDEO,
+        role: SourceRole.PRIMARY,
+        authors: ['AfD in Sachsen und Dresden – Die Dokumentation'],
+        title: 'Rede Björn Höcke Dresden live bei der Jungen Alternative AfD – Dresdner Gespräche',
+        date: '18.01.2017',
+        location: 'Dresden',
+        publishingFormat: 'YouTube Video',
+        url: 'https://www.youtube.com/watch?v=WWwy4cYRFls',
+        lastAccessed: '10.08.2026',
+        timecode: '00:44:42',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '2780' },
+    ],
+  },
+  {
+    // QUOTE-121  (lgbtiq)
+    quote: '„laut schreiende perverse schrille Minderheit“',
+    quoteDisplay: '„[…] laut schreiende perverse schrille Minderheit […]“',
+    owner: [
+      {
+        person: people[People.NICOLE_HOECHST],
+        saidOn: '31.08.2023',
+      },
+    ],
+    sources: [
+      {
+        id: 'Hst2023',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Nicole Höchst'],
+        title: 'Telegram-Beitrag',
+        date: '31.08.2023',
+        publishingFormat: 'Telegram-Beitrag',
+        url: 'https://t.me/nicolehoechstmdb/1443',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '1137' },
+    ],
+  },
+  {
+    // QUOTE-122  (lgbtiq)
+    quote:
+      '„Es gibt nur zwei Geschlechter, Männer und Frauen. Und alles andere ist Hirngespinst. Das ist die Wahrheit.“',
+    owner: [
+      {
+        person: people[People.MAXIMILIAN_KRAH],
+        saidOn: '20.02.2024',
+        context: 'Rede, als Video veröffentlicht',
+      },
+    ],
+    sources: [
+      {
+        id: 'Kra2024',
+        type: SourceType.VIDEO,
+        role: SourceRole.PRIMARY,
+        authors: ['Maximilian Krah'],
+        title: 'Rede vom 14.02.2024',
+        date: '20.02.2024',
+        publishingFormat: 'YouTube Video',
+        url: 'https://www.youtube.com/watch?v=U5nyOUdlMhs',
+        lastAccessed: '10.08.2026',
+        note: 'Die Rede wurde am 14.02.2024 gehalten und am 20.02.2024 als Video veröffentlicht.',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '1139' },
+    ],
+  },
+  {
+    // QUOTE-123  (volksbegriff)
+    quote:
+      '„als Angriff auf die europäischen Nationalstaaten, auf die Nationalstaaten des weißen Mannes“',
+    quoteDisplay:
+      '„[…] als Angriff auf die europäischen Nationalstaaten, auf die Nationalstaaten des weißen Mannes […]“',
+    owner: [
+      {
+        person: people[People.HANS_CHRISTOPH_BERNDT],
+        saidOn: '31.10.2022',
+        context: 'Interview beim Sender Auf1',
+      },
+    ],
+    sources: [
+      {
+        id: 'Auf2022',
+        type: SourceType.VIDEO,
+        role: SourceRole.PRIMARY,
+        authors: ['Auf1'],
+        title: 'Christoph Berndt: ‚Wir brauchen den Druck auf der Straße‘',
+        date: '31.10.2022',
+        publishingFormat: 'Video-Beitrag auf Auf1',
+        url: 'https://auf1.tv/berlin-mitteauf1/christoph-berndt-wir-brauchen-den-druck-der-strasse/',
+        lastAccessed: '10.08.2026',
+        timecode: '00:05:30',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '1247' },
+    ],
+  },
+  {
+    // QUOTE-124  (volksbegriff)
+    quote: '„existenziellen Selbstbehauptungswillen unseres Volkes“',
+    quoteDisplay: '„[…] existenziellen Selbstbehauptungswillen unseres Volkes […]“',
+    owner: [
+      {
+        person: people[People.CHRISTOPH_MAIER],
+        saidOn: '28.10.2020',
+        context: 'Rede im Bayerischen Landtag',
+      },
+    ],
+    sources: [
+      {
+        id: 'Lan2020',
+        type: SourceType.REPORT,
+        role: SourceRole.PRIMARY,
+        authors: ['Bayerischer Landtag'],
+        title: 'Plenarprotokoll der 58. Sitzung des Bayerischen Landtags',
+        page: '7567 f.',
+        date: '28.10.2020',
+        location: 'München',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '721' },
+    ],
+  },
+  {
+    // QUOTE-125  (volksbegriff)
+    quote: '„besetztes und unterwandertes und fremdbestimmtes Land“',
+    quoteDisplay:
+      '„[Deutschland ist ein] besetztes und unterwandertes und fremdbestimmtes Land [...]“',
+    owner: [
+      {
+        person: people[People.BJOERN_HOECKE],
+        saidOn: '29.03.2022',
+        context: 'Facebook-Livestream',
+      },
+    ],
+    sources: [
+      {
+        id: 'Hoc2022',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Björn Höcke'],
+        title: 'Facebook-Livestream',
+        date: '29.03.2022',
+        publishingFormat: 'Facebook-Livestream',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '112' },
+    ],
+  },
+  {
+    // QUOTE-126  (muslimfeindlich)
+    quote:
+      '„In Essen sticht ein Kosovare auf eine Lehrerin ein. Wir kennen noch keine weiteren Hintergründe zu dem Messerkriminellen. Fakt ist: Ich kann mir sehr gut vorstellen, wie dieser Primat sozialisiert ist. Zwangsausbürgerungen müssen ernsthaft diskutiert werden!“',
+    quoteDisplay:
+      '„[…] Ich kann mir sehr gut vorstellen, wie dieser Primat sozialisiert ist. [...]“',
+    owner: [
+      {
+        person: people[People.ENXHI_SELI_ZACHARIAS],
+        saidOn: '05.09.2025',
+        context: 'X-Beitrag über eine Messerattacke in Essen',
+      },
+    ],
+    sources: [
+      {
+        id: 'Sel2025',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Enxhi Seli-Zacharias'],
+        title: 'X-Beitrag',
+        date: '05.09.2025',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://www.twitter.com/enxhiseli/status/1963904881116197064',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '2298' },
+    ],
+  },
+  {
+    // QUOTE-127  (sozialdarwinismus)
+    quote:
+      '„Ich hätte kein Hindernis. Hose runter, ordentlich verjacken und dann ab in den Abschiebeflieger und das mit der gesamten netten Blutlinie, die diese feinen kleinen Burschen haben. Also ich würde kein Hindernis sehe, ich wüsste was zu tun ist!“',
+    quoteDisplay:
+      '„Ich hätte kein Hindernis. Hose runter, ordentlich verjacken und dann ab in den Abschiebeflieger und das mit der gesamten netten Blutlinie [...]. Also ich würde kein Hindernis sehe[n], ich wüsste was zu tun ist!“',
+    owner: [
+      {
+        person: people[People.YVONNE_PRAUSE],
+        saidOn: '13.11.2024',
+        context:
+          'TikTok-Video unter der Überschrift „13-jähriger Syrer ABSCHIEBEN!!! samt Blutlinie“, als Reaktion auf einen Bericht über eine jugendliche Bande im Raum Karlsruhe',
+      },
+    ],
+    sources: [
+      {
+        id: 'Pra2024b',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Yvonne Prause'],
+        title: '13-jähriger Syrer ABSCHIEBEN!!! samt Blutlinie',
+        date: '13.11.2024',
+        publishingFormat: 'TikTok-Video',
+        note: 'Reaktion auf einen Bericht über eine jugendliche Bande im Raum Karlsruhe.',
+      },
+      MIK_BRANDENBURG_2025,
+      { ...GFF_GUTACHTEN_2026, page: '2424' },
+    ],
+  },
+  {
+    // QUOTE-128  (gegnerbekaempfung)
+    quote:
+      '„Widerstand in all seiner Vielseitigkeit und seinem Facettenreichtum. Ich reiche jedem, der in diesen Tagen gegen das Altparteiregime der Deutschlandplünderer auf die Straße geht, die Hand. Frieden, Freiheit, Wohlstand - an erster Stelle Deutschland!“',
+    quoteDisplay:
+      '„[...] Ich reiche jedem, der in diesen Tagen gegen das Altparteiregime der Deutschlandplünderer auf die Straße geht, die Hand. Frieden, Freiheit, Wohlstand – an erster Stelle Deutschland!“',
+    owner: [
+      {
+        person: people[People.HANS_THOMAS_TILLSCHNEIDER],
+        saidOn: '28.08.2022',
+        context: 'Rede',
+      },
+    ],
+    sources: [
+      {
+        id: 'Til2022',
+        type: SourceType.SPEECH,
+        role: SourceRole.PRIMARY,
+        authors: ['Hans-Thomas Tillschneider'],
+        title: 'Rede',
+        date: '28.08.2022',
+        publishingFormat: 'Rede',
+      },
+      BFV_GUTACHTEN_2025,
+      { ...GFF_GUTACHTEN_2026, page: '2870' },
+    ],
+  },
+  {
+    // QUOTE-129  (antisemitismus)
+    quote:
+      '„Jene internationalen Strippenzieher, die die Völker der Welt versklaven und gegeneinander aufhetzen, wie derzeit in der Ukraine, und die Feinde von uns Deutschen sowieso. Kann und muss alles weg!“',
+    quoteDisplay:
+      '„Jene internationalen Strippenzieher, die die Völker der Welt versklaven und gegeneinander aufhetzen, [...] und die Feinde von uns Deutschen sowieso. Kann und muss alles weg!“',
+    owner: [
+      {
+        person: people[People.SILKE_SCHOEPS],
+        saidOn: '10.02.2023',
+        context: 'X-Beitrag über den Krieg in der Ukraine',
+      },
+    ],
+    sources: [
+      {
+        id: 'Sch2023',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Silke Schöps'],
+        title: 'X-Beitrag',
+        date: '10.02.2023',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://x.com/silke_schoeps/status/1624176891186782209',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '2770' },
+    ],
+  },
+  {
+    // QUOTE-130  (remigration)
+    quote:
+      '„D-Day unserer Tage. Es ist eine Invasion und das Tag für Tag und Nacht für Nacht. Wer etwas anderes sagt verkennt den Ernst der Lage oder ist ein Scharlatan.“',
+    quoteDisplay:
+      '„[…] Es ist eine Invasion und das Tag für Tag und Nacht für Nacht. Wer etwas anderes sagt verkennt den Ernst der Lage oder ist ein Scharlatan.“',
+    owner: [
+      {
+        person: people[People.SIEGBERT_DROESE],
+        saidOn: '12.09.2023',
+      },
+    ],
+    sources: [
+      {
+        id: 'Dro2023',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Siegbert Droese'],
+        title: 'X-Beitrag',
+        date: '12.09.2023',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://x.com/SiegbertDroese/status/1701665921511604310',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '1806' },
+    ],
+  },
+  {
+    // QUOTE-131  (volksbegriff)
+    quote:
+      '„So viel Selbsthass, dass man Feinde der eigenen Nation mit offenen Armen als Neubürger empfängt, gibt es sonst nirgendwo auf der Welt. Mit der AfD geht es für solche Personen im schnellsten Tempo wieder zurück in das so viel bessere Heimatland.“',
+    quoteDisplay:
+      '„So viel Selbsthass, dass man Feinde der eigenen Nation mit offenen Armen [...] empfängt, gibt es sonst nirgendwo auf der Welt. […]“',
+    owner: [
+      {
+        person: people[People.CHRISTINA_BAUM],
+        saidOn: '15.05.2025',
+      },
+    ],
+    sources: [
+      {
+        id: 'Bau2025',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Christina Baum'],
+        title: 'Facebook-Beitrag',
+        date: '15.05.2025',
+        publishingFormat: 'Facebook-Beitrag',
+        url: 'https://www.facebook.com/drchristinabaum/posts/pfbid031CZsPczXTA1DFeKymqkZEH2ARsuHwDEsWDFQzYBhKqgLiMuYjkSsWoFb5eZdpLuWl',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '817' },
+    ],
+  },
+  {
+    // QUOTE-132  (antisemitismus)
+    quote: '„Nein, die haben sehr viel mehr Macht, sehr viel Einfluss.“',
+    quoteDisplay: '„[…] die haben sehr viel mehr Macht, sehr viel Einfluss.“',
+    owner: [
+      {
+        person: people[People.HEROLD_PETERS_HARTMANN],
+        saidOn: '26.02.2020',
+        context: 'Antwort auf die Nachfrage eines YouTubers, wer außer den Christen Einfluss habe',
+      },
+    ],
+    sources: [
+      {
+        id: 'Mtv2020',
+        type: SourceType.VIDEO,
+        role: SourceRole.PRIMARY,
+        authors: ['MuslimTvDe'],
+        title: 'Die Islamhetze der AFD | Wohin Hass führen kann',
+        date: '26.02.2020',
+        publishingFormat: 'YouTube Video',
+        url: 'https://www.youtube.com/watch?v=1sikQo0KKCc',
+        lastAccessed: '10.08.2026',
+        timecode: '00:07:26',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '2758' },
+    ],
+  },
+  {
+    // QUOTE-133  (gegnerbekaempfung)
+    quote:
+      '„Das sind keine Gegendemonstranten - das ist einfaches, kriminelles Gesindel, das den Rechtsstaat mit voller Härte zu spüren bekommen muss, einschließlich evtl. Aberkennung der deutschen Staatsbürgerschaft und Ausweisung.“',
+    quoteDisplay:
+      '„Das sind keine Gegendemonstranten – das ist einfaches, kriminelles Gesindel, das den Rechtsstaat mit voller Härte zu spüren bekommen muss [...].“',
+    owner: [
+      {
+        person: people[People.HOLGER_LUCIUS],
+        saidOn: '23.03.2021',
+        context: 'X-Beitrag über Gegendemonstranten',
+      },
+    ],
+    sources: [
+      {
+        id: 'Luc2021',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Holger Lucius'],
+        title: 'X-Beitrag',
+        date: '23.03.2021',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://www.twitter.com/holger_lucius/status/1374320832693035018',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '2206' },
+    ],
+  },
+  {
+    // QUOTE-134  (antisemitismus)
+    quote:
+      '„Eliten hineingenommen, mitgenommen, integriert. Man hat sie transformiert, um sie dann als globalistische Sprechpuppen, als Marionetten zurückzuschicken in ihr Land.“',
+    quoteDisplay:
+      '„[…] Man hat sie transformiert, um sie dann als [...] Sprechpuppen, als Marionetten zurückzuschicken in ihr Land.“',
+    owner: [
+      {
+        person: people[People.BJOERN_HOECKE],
+        saidOn: '30.03.2022',
+        context: 'Äußerung in einem Video des Landesverbands Brandenburg',
+      },
+    ],
+    sources: [
+      {
+        id: 'Afd2022',
+        type: SourceType.VIDEO,
+        role: SourceRole.PRIMARY,
+        authors: ['AfD Brandenburg'],
+        title: 'YouTube-Video des Landesverbands Brandenburg',
+        date: '30.03.2022',
+        publishingFormat: 'YouTube Video',
+      },
+      BFV_GUTACHTEN_2025,
+      { ...GFF_GUTACHTEN_2026, page: '2733' },
+    ],
+  },
+  {
+    // QUOTE-135  (sonstiges)
+    quote:
+      '„Diese astronomische und niemals rückzahlbare Schuldenlast ist Ihr Krieg, nämlich der Krieg gegen die kommenden Generationen, es ist der Krieg gegen unsere Kinder.“',
+    quoteDisplay:
+      '„Diese astronomische und niemals rückzahlbare Schuldenlast ist Ihr Krieg, nämlich der Krieg gegen die kommenden Generationen, es ist der Krieg gegen unsere Kinder.“',
+    owner: [
+      {
+        person: people[People.KATRIN_EBNER_STEINER],
+        saidOn: '12.10.2022',
+        context: 'Rede im Bayerischen Landtag zur Staatsverschuldung',
+      },
+    ],
+    sources: [
+      {
+        id: 'Ebn2022',
+        type: SourceType.SPEECH,
+        role: SourceRole.PRIMARY,
+        authors: ['Katrin Ebner-Steiner'],
+        title: 'Rede im Bayerischen Landtag',
+        date: '12.10.2022',
+        location: 'München',
+        publishingFormat: 'Rede',
+      },
+      LT_BAYERN_18_124,
+      { ...GFF_GUTACHTEN_2026, page: '2873' },
+    ],
+  },
+  {
+    // QUOTE-136  (geschichtsrevision)
+    quote:
+      '„Ganz einfach: das verleugnete ethnisch deutsche Volk darf sich endlich selbst vernichten und damit seine Erbschuld sühnen.“',
+    quoteDisplay:
+      '„[…] das verleugnete ethnisch deutsche Volk darf sich endlich selbst vernichten und damit seine Erbschuld sühnen.“',
+    owner: [
+      {
+        person: people[People.SILKE_SCHOEPS],
+        saidOn: '14.05.2024',
+      },
+    ],
+    sources: [
+      {
+        id: 'Sch2024',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Silke Schöps'],
+        title: 'X-Beitrag',
+        date: '14.05.2024',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://www.twitter.com/silke_schoeps/status/1790430612546883863',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '2784' },
+    ],
+  },
+  {
+    // QUOTE-137  (volksbegriff)
+    quote:
+      '„Geht die Massenzuwanderung so weiter, werden ethnische Wahlen unser Land prägen und irgendwann destabilisieren.“',
+    quoteDisplay:
+      '„Geht die Massenzuwanderung so weiter, werden ethnische Wahlen unser Land prägen und irgendwann destabilisieren.“',
+    owner: [
+      {
+        person: people[People.JOACHIM_PAUL],
+        saidOn: '27.05.2023',
+      },
+    ],
+    sources: [
+      {
+        id: 'Pau2023',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Joachim Paul'],
+        title: 'X-Beitrag',
+        date: '27.05.2023',
+        publishingFormat: 'X-Beitrag',
+        url: 'https://twitter.com/joachimpaul_afd/status/1662498439433797633',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '2136' },
+    ],
+  },
+  {
+    // QUOTE-138  (sonstiges)
+    quote: '„Früher hieß rechtes Gedankengut noch gesunder Menschenverstand.“',
+    owner: [
+      {
+        person: people[People.MARTIN_VINCENTZ],
+        saidOn: '16.01.2025',
+      },
+    ],
+    sources: [
+      {
+        id: 'Vin2025',
+        type: SourceType.SOCIAL_MEDIA,
+        role: SourceRole.PRIMARY,
+        authors: ['Martin Vincentz'],
+        title: 'Instagram-Beitrag',
+        date: '16.01.2025',
+        publishingFormat: 'Instagram-Beitrag',
+        url: 'https://www.instagram.com/p/DE6nXMUhCQp',
+        lastAccessed: '10.08.2026',
+      },
+      { ...GFF_GUTACHTEN_2026, page: '1528' },
     ],
   },
 ];

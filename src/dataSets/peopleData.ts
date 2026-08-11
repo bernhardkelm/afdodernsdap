@@ -21,6 +21,30 @@ export enum People {
   OLIVER_KIRCHNER = 'oliverKirchner',
   BERND_BAUMANN = 'berndBaumann',
   BEATRIX_VON_STORCH = 'beatrixVonStorch',
+  STEPHAN_BRANDNER = 'stephanBrandner',
+  YVONNE_PRAUSE = 'yvonnePrause',
+  HANNES_GNAUCK = 'hannesGnauck',
+  HANS_CHRISTOPH_BERNDT = 'hansChristophBerndt',
+  TINO_CHRUPALLA = 'tinoChrupalla',
+  SEBASTIAN_MUENZENMAIER = 'sebastianMuenzenmaier',
+  GUNTRAM_PROSS = 'guntramPross',
+  DANIEL_WALD = 'danielWald',
+  HARALD_LAATSCH = 'haraldLaatsch',
+  LEYLA_BILGE = 'leylaBilge',
+  MARTIN_BOEHM = 'martinBoehm',
+  GUNNAR_LINDEMANN = 'gunnarLindemann',
+  MATTHIAS_HELFERICH = 'matthiasHelferich',
+  SIMON_KUCHLBAUER = 'simonKuchlbauer',
+  CHRISTOPH_MAIER = 'christophMaier',
+  ENXHI_SELI_ZACHARIAS = 'enxhiSeliZacharias',
+  HANS_THOMAS_TILLSCHNEIDER = 'hansThomasTillschneider',
+  SILKE_SCHOEPS = 'silkeSchoeps',
+  SIEGBERT_DROESE = 'siegbertDroese',
+  HEROLD_PETERS_HARTMANN = 'heroldPetersHartmann',
+  HOLGER_LUCIUS = 'holgerLucius',
+  KATRIN_EBNER_STEINER = 'katrinEbnerSteiner',
+  JOACHIM_PAUL = 'joachimPaul',
+  MARTIN_VINCENTZ = 'martinVincentz',
 }
 
 const people: Record<People, Person> = {
@@ -117,6 +141,128 @@ const people: Record<People, Person> = {
   [People.BEATRIX_VON_STORCH]: {
     name: 'Beatrix von Storch',
     position: 'MdB (seit 2017), stellvertretende Vorsitzende der AfD-Bundestagsfraktion',
+    party: Parties.AFD,
+  },
+  [People.STEPHAN_BRANDNER]: {
+    name: 'Stephan Brandner',
+    position:
+      'MdB aus Thüringen, stv. Bundessprecher und parlamentarischer Geschäftsführer der Bundestagsfraktion',
+    party: Parties.AFD,
+  },
+  [People.YVONNE_PRAUSE]: {
+    name: 'Yvonne Prause',
+    position: 'Kreisrätin im Landkreis Oberhavel in Brandenburg',
+    party: Parties.AFD,
+  },
+  [People.HANNES_GNAUCK]: {
+    name: 'Hannes Gnauck',
+    position: 'MdB aus Brandenburg, Mitglied im Bundesvorstand und im Landesvorstand Brandenburg',
+    party: Parties.AFD,
+  },
+  [People.HANS_CHRISTOPH_BERNDT]: {
+    name: 'Hans-Christoph Berndt',
+    position: 'MdL in Brandenburg, stv. Landesvorsitzender und Fraktionsvorsitzender Brandenburg',
+    party: Parties.AFD,
+  },
+  [People.TINO_CHRUPALLA]: {
+    name: 'Tino Chrupalla',
+    position: 'MdB aus Sachsen, Bundessprecher und Vorsitzender der Bundestagsfraktion',
+    party: Parties.AFD,
+  },
+  [People.SEBASTIAN_MUENZENMAIER]: {
+    name: 'Sebastian Münzenmaier',
+    position:
+      'MdB, stv. Vorsitzender der Bundestagsfraktion und stv. Landesvorsitzender Rheinland-Pfalz',
+    party: Parties.AFD,
+  },
+  [People.GUNTRAM_PROSS]: {
+    name: 'Guntram Proß',
+    position: 'Kreisrat im Rhein-Neckar-Kreis in Baden-Württemberg',
+    party: Parties.AFD,
+  },
+  [People.DANIEL_WALD]: {
+    name: 'Daniel Wald',
+    position: 'MdL in Sachsen-Anhalt',
+    party: Parties.AFD,
+  },
+  [People.HARALD_LAATSCH]: {
+    name: 'Harald Laatsch',
+    position: 'MdA',
+    party: Parties.AFD,
+  },
+  [People.LEYLA_BILGE]: {
+    name: 'Leyla Bilge',
+    position: 'stv. Vorsitzende KV Rosenheim',
+    party: Parties.AFD,
+  },
+  [People.MARTIN_BOEHM]: {
+    name: 'Martin Böhm',
+    position: 'MdL in Bayern, stv. Landes- und Fraktionsvorsitzender Bayern',
+    party: Parties.AFD,
+  },
+  [People.GUNNAR_LINDEMANN]: {
+    name: 'Gunnar Lindemann',
+    position: 'MdA',
+    party: Parties.AFD,
+  },
+  [People.MATTHIAS_HELFERICH]: {
+    name: 'Matthias Helferich',
+    position: 'MdB aus Nordrhein-Westfalen',
+    party: Parties.AFD,
+  },
+  [People.SIMON_KUCHLBAUER]: {
+    name: 'Simon Kuchlbauer',
+    position: 'stellv. Vorsitzender im Kreistag Aichach-Friedberg in Bayern',
+    party: Parties.AFD,
+  },
+  [People.CHRISTOPH_MAIER]: {
+    name: 'Christoph Maier',
+    position: 'MdL in Bayern',
+    party: Parties.AFD,
+  },
+  [People.ENXHI_SELI_ZACHARIAS]: {
+    name: 'Enxhi Seli-Zacharias',
+    position: 'MdL und stv. Fraktionsvorsitzende in Nordrhein-Westfalen',
+    party: Parties.AFD,
+  },
+  [People.HANS_THOMAS_TILLSCHNEIDER]: {
+    name: 'Hans-Thomas Tillschneider',
+    position: 'MdL in Sachsen-Anhalt und stv. Landesvorsitzender Sachsen-Anhalt',
+    party: Parties.AFD,
+  },
+  [People.SILKE_SCHOEPS]: {
+    name: 'Silke Schöps',
+    position: 'Stadträtin in Dresden',
+    party: Parties.AFD,
+  },
+  [People.SIEGBERT_DROESE]: {
+    name: 'Siegbert Droese',
+    position: 'MdEP und Mitglied im Landesvorstand Sachsen',
+    party: Parties.AFD,
+  },
+  [People.HEROLD_PETERS_HARTMANN]: {
+    name: 'Herold Peters-Hartmann',
+    position: 'ehem. Vorsitzender KV Würzburg',
+    party: Parties.AFD,
+  },
+  [People.HOLGER_LUCIUS]: {
+    name: 'Holger Lucius',
+    position: 'Stadtrat in Münster in Nordrhein-Westfalen',
+    party: Parties.AFD,
+  },
+  [People.KATRIN_EBNER_STEINER]: {
+    name: 'Katrin Ebner-Steiner',
+    position: 'MdL in Bayern und Fraktionsvorsitzende Bayern',
+    party: Parties.AFD,
+  },
+  [People.JOACHIM_PAUL]: {
+    name: 'Joachim Paul',
+    position: 'MdL in Rheinland-Pfalz und stv. Fraktionsvorsitzender Rheinland-Pfalz',
+    party: Parties.AFD,
+  },
+  [People.MARTIN_VINCENTZ]: {
+    name: 'Martin Vincentz',
+    position: 'MdL in Nordrhein-Westfalen und Landesvorsitzender Nordrhein-Westfalen',
     party: Parties.AFD,
   },
 };

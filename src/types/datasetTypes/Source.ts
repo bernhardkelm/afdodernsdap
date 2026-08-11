@@ -5,6 +5,13 @@ export enum SourceType {
   INBOOK = 'inbook',
   SOCIAL_MEDIA = 'social-media',
   VIDEO = 'video',
+  SPEECH = 'speech',
+  REPORT = 'report',
+}
+
+export enum SourceRole {
+  PRIMARY = 'primary', // die Äußerung selbst (Posting, Video, Rede, Protokoll)
+  SECONDARY = 'secondary', // Nachweis, über den die Äußerung belegt ist (Gutachten, Behördenvermerk, Berichterstattung)
 }
 
 export type Source = {
@@ -13,6 +20,8 @@ export type Source = {
   authors: string[];
   title: string;
   page?: string; // bspw. '10-12'
+
+  role?: SourceRole; // ohne Angabe: PRIMARY
 
   // publishing
   publisher?: string;
@@ -25,6 +34,12 @@ export type Source = {
   date?: string;
 
   lastAccessed?: string; // bei reinen internet-quellen, dd.MM.yyyy format
+
+  // Fundstelle innerhalb eines Audio-/Videobelegs, hh:mm:ss oder mm:ss
+  timecode?: string;
+
+  // Editorische Anmerkung zur Quellenlage
+  note?: string;
 
   // identifiers
   isbn?: string;
