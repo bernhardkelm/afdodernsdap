@@ -48,7 +48,11 @@ import TextPageWrapper from '@/components/TextPageWrapper.vue';
     <section>
       <h2 id="verantwortlicher">Verantwortlicher</h2>
       <p>
-        Bernhard Kelm<br />c/o MDC Management#bernhardkelm<br />Welserstraße 3<br />87463 Dietmannsried<br />Deutschland
+        Bernhard Kelm <br/>
+        c/o Impressumservice Dein-Impressum<br/>
+        Stettiner Str. 41<br/>
+        35410 Hungen<br/>
+        Deutschland
       </p>
       <p>
         E-Mail-Adresse:
